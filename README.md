@@ -2,8 +2,8 @@
 This repo will include my custom implementations of various react components.
 
 ## Components being built
-- Accordion
-- Tooltip
+- [ ] Accordion
+- [ ] Tooltip
 
 ## Components ready to use
 (This repo is too fresh to have a component.)

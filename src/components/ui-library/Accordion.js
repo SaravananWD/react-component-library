@@ -65,6 +65,7 @@ const Accordion = ({
 };
 
 const Item = ({ children, itemId, disabled }) => {
+  const { openItems } = React.useContext(AccordionContext);
   // Error handling
   const triggers = React.Children.toArray(children).filter(
     (child) => child.type === Trigger
@@ -80,7 +81,6 @@ const Item = ({ children, itemId, disabled }) => {
     return null;
   }
 
-  const { openItems } = React.useContext(AccordionContext);
   const isOpen = openItems.has(itemId);
 
   return (

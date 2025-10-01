@@ -19,26 +19,6 @@ export default function Header() {
           </Link>
         </span>
       </Logo>
-      <p className="para-max-width">
-        These components are created primarily for learning purposes. You may
-        use and experiment with them as needed. This is the{" "}
-        <Link
-          href="https://github.com/SaravananWD/react-component-library"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          repo link
-        </Link>{" "}
-        and to read more about this project, see its{" "}
-        <Link
-          href="https://saravanan.dev/projects/ui-library"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          project details
-        </Link>{" "}
-        page.
-      </p>
     </div>
   );
 }
@@ -48,6 +28,8 @@ const Logo = styled.div`
   font-size: var(--type-size-md);
   font-weight: 600;
   color: var(--color-text);
+  /* border-bottom: 1px solid var(--color-gray-85);
+  margin-bottom: ${space(7)}px; */
 
   .logo-tag {
     display: block;

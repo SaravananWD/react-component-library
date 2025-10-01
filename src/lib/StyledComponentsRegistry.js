@@ -1,28 +1,27 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { useServerInsertedHTML } from "next/navigation";
 import { ServerStyleSheet, StyleSheetManager } from "styled-components";
-import PropTypes from "prop-types";
 
 export default function StyledComponentsRegistry({ children }) {
-  const [styledComponentsStyleSheet] = useState(() => new ServerStyleSheet());
+  const [styleSheet] = React.useState(() => new ServerStyleSheet());
 
   useServerInsertedHTML(() => {
-    const styles = styledComponentsStyleSheet.getStyleElement();
-    styledComponentsStyleSheet.instance.clearTag();
+    const styles = styleSheet.getStyleElement();
+    styleSheet.instance.clearTag();
     return <>{styles}</>;
   });
 
   if (typeof window !== "undefined") return <>{children}</>;
 
   return (
-    <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
+    <StyleSheetManager sheet={styleSheet.instance}>
       {children}
     </StyleSheetManager>
   );
 }
 
-StyledComponentsRegistry.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+// StyledComponentsRegistry.propTypes = {
+//   children: PropTypes.node.isRequired,
+// };

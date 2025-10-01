@@ -174,7 +174,7 @@ Content.propTypes = {
 export default Accordion;
 
 // Demo
-function AccordionComponentDemo() {
+function AccordionComponentDemo({ isMultiple = false }) {
   return (
     <Accordion>
       <Accordion.Item itemId="example1">

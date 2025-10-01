@@ -3,44 +3,37 @@ import space from "@/utils/space";
 import styled from "styled-components";
 import Link from "next/link";
 import { device } from "@/styles/breakpoints";
+import COMPONENTS from "@/data/COMPONENTS";
+import { usePathname } from "next/navigation";
 
 export default function ComponentList() {
+  const pathname = usePathname();
+
   return (
     <>
       <ComponentLinks>
         <NavHeader>Available Components</NavHeader>
-        <Link href="/accordion">Accordion</Link>
+        {COMPONENTS.map((comp) => {
+          if (comp.status === "incomplete") return;
+          return (
+            <Link
+              className={pathname === comp.link ? "active" : ""}
+              key={comp.id}
+              href={comp.link}
+            >
+              {comp.title}
+            </Link>
+          );
+        })}
         <NavHeader>Under development</NavHeader>
-        <Link
-          // className="active"
-          href="/tooltip"
-        >
-          Tooltip
-        </Link>{" "}
-        <Link href="/Button" target="_blank" rel="noopener noreferrer">
-          Button
-        </Link>
-        <Link href="/Button" target="_blank" rel="noopener noreferrer">
-          Button
-        </Link>{" "}
-        <Link href="/Button" target="_blank" rel="noopener noreferrer">
-          Button
-        </Link>
-        <Link href="/Button" target="_blank" rel="noopener noreferrer">
-          Button
-        </Link>
-        <Link href="/Button" target="_blank" rel="noopener noreferrer">
-          Button
-        </Link>
-        <Link href="/Button" target="_blank" rel="noopener noreferrer">
-          Button
-        </Link>
-        <Link href="/Button" target="_blank" rel="noopener noreferrer">
-          Button
-        </Link>
-        <Link href="/Button" target="_blank" rel="noopener noreferrer">
-          Button
-        </Link>
+        {COMPONENTS.map((comp) => {
+          if (comp.status === "complete") return;
+          return (
+            <Link key={comp.id} href={comp.link}>
+              {comp.title}
+            </Link>
+          );
+        })}
       </ComponentLinks>
     </>
   );
@@ -72,11 +65,12 @@ const ComponentLinks = styled.div`
   }
 
   a.active {
-    font-weight: 600;
+    font-weight: 700;
   }
 
   @media ${device.tablet} {
     max-width: ${space(60)}px;
+    justify-content: start;
   }
 `;
 

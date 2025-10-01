@@ -3,7 +3,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 import Wrapper from "@/components/Wrapper";
+import Container from "@/components/Container";
 import StyledComponentsRegistry from "@/lib/StyledComponentsRegistry";
+import PageLayout from "@/components/PageLayout";
 
 export const metadata = {
   title: "React Component Library by Saravanan",
@@ -13,13 +15,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="">
+    <html lang="en" className="" data-theme="dark">
       <body>
         <StyledComponentsRegistry>
           <Wrapper>
-            <Header />
-
-            {children}
+            <Container>
+              <Header />
+              <PageLayout>{children}</PageLayout>
+            </Container>
             <Footer />
           </Wrapper>
         </StyledComponentsRegistry>

@@ -9,15 +9,11 @@ export default function ComponentList() {
     <>
       <ComponentLinks>
         <NavHeader>Available Components</NavHeader>
-        <Link href="/Accordion" target="_blank" rel="noopener noreferrer">
-          Accordion
-        </Link>
+        <Link href="/accordion">Accordion</Link>
         <NavHeader>Under development</NavHeader>
         <Link
           // className="active"
-          href="/Tooltip"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/tooltip"
         >
           Tooltip
         </Link>{" "}
@@ -55,14 +51,15 @@ const ComponentLinks = styled.div`
   border-radius: ${space(2)}px;
   overflow: hidden;
   width: 100%;
+  margin-bottom: ${space(5)}px;
   a {
     display: block;
     padding: ${space(2)}px;
-    background-color: var(--color-gray-90);
+
     font-size: var(--type-size-xs);
     text-decoration: none;
     border-bottom: 1px solid var(--color-gray-85);
-    transition: var(--transition-bg);
+    transition: all var(--base-transition);
     color: var(--color-text);
   }
 
@@ -76,7 +73,6 @@ const ComponentLinks = styled.div`
 
   a.active {
     font-weight: 600;
-    background-color: var(--color-gray-85);
   }
 
   @media ${device.tablet} {
@@ -87,4 +83,9 @@ const ComponentLinks = styled.div`
 const NavHeader = styled.div`
   padding: ${space(2)}px ${space(2)}px;
   border-bottom: 1px solid var(--color-gray-85);
+  color: var(--color-gray-20);
+  background-color: var(--color-gray-85);
+  font-size: var(--type-size-xs);
+  text-align: left;
+  font-weight: 600;
 `;

@@ -51,7 +51,7 @@ const Logo = styled.div`
 
   .logo-tag {
     display: block;
-    font-size: var(--type-size-sm);
+    font-size: var(--type-size-xs);
     font-weight: 500;
     color: var(--color-muted);
   }

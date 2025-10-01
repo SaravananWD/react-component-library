@@ -4,8 +4,8 @@ import space from "@/utils/space";
 
 const Wrapper = styled.div`
   max-width: var(--layout-max-width);
-  margin: auto;
-  padding: 0 ${space(3)}px;
+  margin: ${space(5)}px auto;
+  padding: 0 ${space(5)}px;
 `;
 
 export default Wrapper;

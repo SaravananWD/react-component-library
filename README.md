@@ -1,11 +1,13 @@
 # React Component Library
-This repo will include my custom implementations of various react components.
 
-## Components being built
-- [ ] Accordion
-- [ ] Tooltip
+This repository contains my custom implementations of various React components.
 
-## Components ready to use
-(This repo is too fresh to have a component.)
+👉 Check out the **live demo and documentation** here:  
+[https://sui-library.vercel.app/](https://sui-library.vercel.app/)
 
-Please wait while I am researching other libraries, understanding the core, solving the problem and creating my first functional ui component for this library.
+---
+
+### 📬 Contact
+
+Feel free to reach out for questions, collaborations, or just to say hi:  
+**hello@saravanan.dev**

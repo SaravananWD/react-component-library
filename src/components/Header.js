@@ -7,10 +7,13 @@ export default function Header() {
   return (
     <div>
       <Logo>
-        React Component Library...
+        <Link href="/" className="text-link">
+          React Component Library...
+        </Link>
         <span className="logo-tag">
           by{" "}
           <Link
+            className="name"
             href="https://saravanan.dev"
             target="_blank"
             rel="noopener noreferrer"
@@ -37,11 +40,11 @@ const Logo = styled.div`
     font-weight: 500;
     color: var(--color-muted);
   }
-  a {
+  a.name {
     color: var(--color-muted);
     text-decoration: none;
   }
-  a:hover {
+  a.name:hover {
     text-decoration: underline;
   }
 `;

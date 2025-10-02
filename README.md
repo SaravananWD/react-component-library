@@ -1,13 +1,34 @@
-# React Component Library
+# ⚛️ React Component Library
 
-This repository contains my custom implementations of various React components.
-
-👉 Check out the **live demo and documentation** here:  
-[https://sui-library.vercel.app/](https://sui-library.vercel.app/)
+A collection of **custom React components** built for reusability, performance, and clean design.
 
 ---
 
-### 📬 Contact
+## 🌐 Live Demo & Documentation
 
-Feel free to reach out for questions, collaborations, or just to say hi:  
-**hello@saravanan.dev**
+Explore the **interactive demo** and documentation for each component:  
+🔗 [https://sui-library.vercel.app/](sui-library.vercel.app)
+
+---
+
+## 🚀 Features
+
+- Fully written in **React**
+- Modular and reusable components
+- Clean and maintainable codebase
+- Ready for production usage
+
+---
+
+## 📬 Contact & Collaboration
+
+Have questions, suggestions, or want to collaborate?  
+📧 **hello@saravanan.dev**
+
+Connect and let’s build something awesome!
+
+---
+
+## 📝 License
+
+MIT License © Saravanan

@@ -269,6 +269,14 @@ a.text-link {
   color: var(--color-text);
 }
 
+/* Font size */
+
+.fs-xs {
+  font-size: var(--type-size-xs);
+  line-height: var(--type-height-xs);
+  margin-bottom: var(--space-3);
+}
+
 /* Margins */
 
 .mt3 {

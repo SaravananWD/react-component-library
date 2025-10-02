@@ -29,7 +29,12 @@ export default function ComponentList() {
         {COMPONENTS.map((comp) => {
           if (comp.status === "complete") return;
           return (
-            <Link key={comp.id} href={comp.link}>
+            <Link
+              key={comp.id}
+              href={comp.link}
+              aria-disabled
+              className="disabled"
+            >
               {comp.title}
             </Link>
           );
@@ -66,6 +71,12 @@ const ComponentLinks = styled.div`
 
   a.active {
     font-weight: 700;
+  }
+
+  a.disabled {
+    pointer-events: none;
+    cursor: default;
+    color: var(--color-gray-40);
   }
 
   @media ${device.tablet} {

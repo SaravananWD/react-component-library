@@ -5,7 +5,7 @@ import space from "@/utils/space";
 import PropTypes from "prop-types";
 
 const TriggerIcon = () => {
-  return <ChevronRight className="accordion-title-icon" />;
+  return <ChevronRight className="accordion-icon" />;
 };
 
 const AccordionContext = React.createContext();
@@ -244,7 +244,7 @@ const StyledAccordion = styled.div`
     }
   }
 
-  .accordion-title-icon {
+  .accordion-icon {
     transform: rotate(0deg);
     transition: transform var(--base-transition);
   }
@@ -277,7 +277,7 @@ const StyledAccordion = styled.div`
       transition-delay: 0.15s;
     }
 
-    .accordion-title-icon {
+    .accordion-icon {
       transform: rotate(90deg);
     }
   }
@@ -301,7 +301,7 @@ const HeadlessStyles = styled.div`
     align-items: center;
   }
 
-  .accordion-title-icon {
+  .accordion-icon {
     transform: rotate(0deg);
     transition: transform var(--base-transition);
   }
@@ -323,7 +323,7 @@ const HeadlessStyles = styled.div`
       grid-template-rows: 1fr;
     }
 
-    .accordion-title-icon {
+    .accordion-icon {
       transform: rotate(90deg);
     }
   }

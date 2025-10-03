@@ -7,7 +7,7 @@ A collection of **custom React components** built for reusability, performance, 
 ## 🌐 Live Demo & Documentation
 
 Explore the **interactive demo** and documentation for each component:  
-🔗 [https://sui-library.vercel.app/](sui-library.vercel.app)
+🔗 [sui-library.vercel.app](https://sui-library.vercel.app/)
 
 ---
 

@@ -12,7 +12,7 @@ export default function Home() {
         These components are created primarily for learning purposes. You may
         use and experiment with them as needed. This is the{" "}
         <Link
-          href="https://github.com/SaravananWD/react-component-library"
+          href="https://github.com/falsydev/react-component-library"
           target="_blank"
           rel="noopener noreferrer"
         >
